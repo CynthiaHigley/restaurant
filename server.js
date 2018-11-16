@@ -15,21 +15,22 @@ app.use(express.json());
 
 // Customer Reservation data (DATA)
 // =============================================================
-var customers = [];
+var tables = [];
+var waitlist = [];
 
 // Routes
 // =============================================================
 
 // Basic route that sends the user first to the AJAX Page
 app.get("/", function(req, res) {
-  res.sendFile(path.join(__dirname, "home.html"));
+  
 });
 
 app.get("/add", function(req, res) {
-  res.sendFile(path.join(__dirname, "res.html"));
+  // res.sendFile(path.join(__dirname, "res.html"));
 });
-app.get("/add", function(req, res) {
-  res.sendFile(path.join(__dirname, "view.html"));
+app.get("/list", function(req, res) {
+  // res.sendFile(path.join(__dirname, "view.html"));
 });
 // Displays all customers
 app.get("/api/customers", function(req, res) {
